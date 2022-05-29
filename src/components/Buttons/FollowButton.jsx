@@ -31,9 +31,10 @@ const FollowButton = (props) => {
 
     follower.find((artistSaved) => artistSaved.id === artist.id)
       ? dispatch(removeFavoriteArtist(artist.id))
-      : dispatch(addFavoriteArtist(artist.id));
+      : dispatch(addFavoriteArtist(artist));
   };
-
+    console.log(toggle)
+    console.log(follower)
     // const { artist, follower } = this.props;
 
     return (
