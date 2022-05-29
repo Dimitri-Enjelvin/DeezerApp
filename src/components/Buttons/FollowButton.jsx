@@ -14,7 +14,7 @@ import { addFavoriteArtist, removeFavoriteArtist } from "../../redux/slice/favor
 const FollowButton = (props) => {
 
   const { artist } = props
-  const follower = useSelector((state) => state.favArtists)
+  const follower = useSelector((state) => state.favorites.favArtists)
   const dispatch = useDispatch()
   const [toggle, setToggle] = useState(false)
   // constructor(props) {
