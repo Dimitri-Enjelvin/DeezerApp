@@ -17,15 +17,15 @@ const Genres = () => {
     return (
       <React.Fragment>
         <h1>Genres</h1>
-        <div className="genres-section">
-          {genres.data.slice(1, genres.data.length).map((genre) => (
-            <StandarCard
-              text={genre.name}
-              pic={genre.picture_big}
-              url={`/genre/${genre.id}`}
-            />
-          ))}
-        </div>
+          <div className="genres-section">
+            {genres.data.slice(1, genres.data.length).map((genre) => (
+              <StandarCard
+                text={genre.name}
+                pic={genre.picture_big}
+                url={`/genre/${genre.id}`}
+              />
+            ))}
+          </div>
       </React.Fragment>
     );
 

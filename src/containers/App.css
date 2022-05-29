@@ -222,6 +222,12 @@
     grid-gap: 32px;
 }
 
+@media (max-width: 768px) {
+    .genres-section {
+        /* center mobile pages */
+    }
+}
+
 
 /* End Discover Page */
 

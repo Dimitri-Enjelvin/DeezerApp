@@ -3,7 +3,7 @@ import React, { useEffect } from "react";
 // import { bindActionCreators } from "redux";
 
 // import fetchTopTracksAction from "../api/fetchChart";
-import { useGetChartTracksQuery } from "../api"
+// import { useGetChartTracksQuery } from "../api"
 
 import Loading from "../components/Loading/Loading";
 import CardSong from "../components/CardTracks/CardSong";

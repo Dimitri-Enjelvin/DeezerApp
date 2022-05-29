@@ -8,7 +8,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 // import fetchTopAlbumsAction from "../api/fetchChart";
-import { useGetChartAlbumsQuery } from "../api"
+// import { useGetChartAlbumsQuery } from "../api"
 
 
 

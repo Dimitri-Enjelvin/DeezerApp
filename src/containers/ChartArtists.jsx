@@ -3,7 +3,7 @@ import React from "react";
 // import { bindActionCreators } from "redux";
 
 // import fetchTopArtistsAction from "../api/fetchChart";
-import { useGetChartArtistsQuery } from "../api"
+// import { useGetChartArtistsQuery } from "../api"
 
 
 import Loading from "../components/Loading/Loading";

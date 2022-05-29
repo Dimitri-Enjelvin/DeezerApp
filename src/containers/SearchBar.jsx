@@ -16,20 +16,8 @@ import ToogleTheme from "../components/Buttons/Toggle";
 
 const SearchBar = () => {
 
-  const { data, func, isLoading, query, setQuery } = useQuery()
-  const { albums, artists, tracks } = data
-  const { getSearchAlbumsByQuery, getSearchArtistsByQuery, getSearchTracksByQuery } = func
-  
-  // constructor(props) {
-  //   super(props);
-  //   this.state = { query: "" };
+  const { tracks, isLoading, query, setQuery } = useQuery()
 
-  //   this.handleChange = this.handleChange.bind(this);
-  //   this.handleSearch = this.handleSearch.bind(this);
-  // }
-  console.log("albums", albums);
-  // console.log("artists", artists)
-  // console.log("tracks", tracks)
 
   useEffect(() => {
     window.addEventListener("click", function (e) {
@@ -47,55 +35,23 @@ const SearchBar = () => {
         }
       })
     }
-  }, [])
+  }, [query])
   
-
-  const handleSearch = (e) => {
-    e.preventDefault();
-    // const { searchArtists, searchAlbums, searchTracks } = this.props;
-    if (query.length > 3) {
-      getSearchArtistsByQuery();
-      getSearchAlbumsByQuery();
-      getSearchTracksByQuery();
-    }
-  }
 
   const handleChange = (e) => {
     let query = e.target.value;
     setQuery(query)
 
-    // const { searchArtists, searchAlbums, searchTracks } = this.props;
-
-    if (query.length > 3) {
-      getSearchArtistsByQuery();
-      getSearchAlbumsByQuery();
-      getSearchTracksByQuery();
-    } else {
-      if (document.getElementById("hint-container")) {
-        document.getElementById("hint-container").style.display = "none";
-      }
+    if(query.length === 0) {
+      document.getElementById("hint-container").style.display = "none";
     }
   }
 
-  // render() {
-  //   window.addEventListener("click", function (e) {
-  //     // if element exists, then...
-  //     if (document.getElementById("hint-container")) {
-  //       document.getElementById("hint-container").style.display = "none";
-  //     }
-  //   });
-    // const {
-    //   foundArtists,
-    //   foundAlbums,
-    //   foundTracks,
-    //   loadingArtists,
-    //   loadingAlbums,
-    //   loadingTracks,
-    // } = this.props;
+  
     if (isLoading) {
       return (
         <div className="search-container">
-          <form onSubmit={handleSearch}>
+          <form>
             <FontAwesomeIcon className="icon-search" icon={faSearch} />
             <input
               type="text"
@@ -107,50 +63,26 @@ const SearchBar = () => {
         </div>
       );
     }
+
+
+
     return (
       <div className="search-container">
-        <form onSubmit={handleSearch}>
+        <form>
           <FontAwesomeIcon className="icon-search" icon={faSearch} />
           <input
             type="text"
             placeholder="Search Artist, Albums, Songs"
             onChange={handleChange}
           />
-          {/* <HintResults
-            artistsFound={artists}
-            albumsFound={albums}
+          <HintResults
             songsFound={tracks}
-          /> */}
+          />
         </form>
         <ToogleTheme />
       </div>
     );
-  // }
 }
 
-// const mapStateToProps = (state) => ({
-//   //artists
-//   loadingArtists: state.searchArtists.loading,
-//   errorArtists: state.searchArtists.error,
-//   foundArtists: state.searchArtists.artists,
-//   // albums
-//   loadingAlbums: state.searchAlbums.loading,
-//   errorAlbums: state.searchAlbums.error,
-//   foundAlbums: state.searchAlbums.albums,
-//   // tracks
-//   loadingTracks: state.searchTracks.loading,
-//   errorTracks: state.searchTracks.error,
-//   foundTracks: state.searchTracks.tracks,
-// });
-
-// const mapDispatchToProps = (dispatch) =>
-//   bindActionCreators(
-//     {
-//       searchArtists: fetchSearchArtistAction,
-//       searchAlbums: fetchSearchAlbumsAction,
-//       searchTracks: fetchSearchTracksAction,
-//     },
-//     dispatch
-//   );
 
 export default SearchBar;
