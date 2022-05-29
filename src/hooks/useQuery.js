@@ -7,85 +7,35 @@ export default function useQuery() {
 
     const [query, setQuery] = useState("")
     const [isLoading, setIsLoading] = useState(true)
-    const [error, setError] = useState(null)
-    const [data, setData] = useState({
-        albums: [],
-        tracks: [],
-        artist: [],
-    })
+    const [tracks, setTracks] = useState({})
+    const [error, setError] = useState("")
 
+    const getSearchTracksByQuery = async () => {
 
-
-
-    // const getSearchByQuery = () => {
-
-    //     DZ.api(`/search/${type}?q=${query}&limit=3`, async (response) => {
-    //         const data = await response    
-    //         type === 'albums' ? setData({ albums: data })
-    //         :
-    //         setIsLoading(false)
-    //         })
-    
-    // }
-
-
-    const getSearchAlbumsByQuery = () => {
-
+        if(query === "") return
 
         try {
-            DZ.api(`/search/album?q=${query}&limit=3`, async (response) => {
+            setIsLoading(true)
+            await DZ.api(`/search/track?q=${query}&limit=10`, async (response) => {
                 const data = await response
-                setData({albums: data});
-            });
-            
-        }
-        catch (error) {
-            setError(error)
-        }
-
-        setIsLoading(false)
-
-    }
-
-    const getSearchArtistsByQuery = () => {
-
-        try {
-            DZ.api(`/search/artist?q=${query}&limit=3`, async (response) => {
-                const data = await response
-                setData({artists: data});
+                setTracks(data)
+                setIsLoading(false)
             })
         }
         catch (error) {
             setError(error)
         }
 
-        setIsLoading(false)
-
-    }
-
-    const getSearchTracksByQuery = () => {
-
-
-        try {
-            DZ.api(`/search/track?q=${query}&limit=3`, async (response) => {
-                const data = await response
-                setData({tracks: data});
-            })
-        }
-        catch (error) {
-            setError(error)
-        }
-
-        setIsLoading(false)
+        
 
     }    
+
+    useEffect(() => {
+
+        getSearchTracksByQuery()
+
+    }, [query])
     
-    const func = {
-        getSearchAlbumsByQuery,
-        getSearchArtistsByQuery,
-        getSearchTracksByQuery
-    }
 
-
-    return { func, query, setQuery, data, isLoading, error }
+    return { query, setQuery, tracks, isLoading, error }
 }
