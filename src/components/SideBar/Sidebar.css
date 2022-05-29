@@ -19,7 +19,7 @@
 }
 
 .container .item:focus {
-    cursor: none;
+    cursor: default;
     color: var(--yellow);
 }
 
