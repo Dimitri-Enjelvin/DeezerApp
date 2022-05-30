@@ -10,13 +10,12 @@ export default function useQuery() {
     const [tracks, setTracks] = useState({})
     const [error, setError] = useState("")
 
-    const getSearchTracksByQuery = async () => {
+    const getSearchTracksByQuery = () => {
 
         if(query === "") return
 
         try {
-            setIsLoading(true)
-            await DZ.api(`/search/track?q=${query}&limit=10`, async (response) => {
+            DZ.api(`/search/track?q=${query}&limit=10`, async (response) => {
                 const data = await response
                 setTracks(data)
                 setIsLoading(false)
