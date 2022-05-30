@@ -7,7 +7,7 @@ const FavoriteMobilePage = () => {
         <section className="section-favorite">
           <Link to="/albums">
             <h1>Albums</h1>
-          </Link>
+          </Link>  
         </section>
         <section className="section-favorite">
           <Link to="/artists">

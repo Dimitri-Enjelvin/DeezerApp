@@ -14,7 +14,7 @@ import { addFavoriteSong, removeFavoriteSong } from "../../redux/slice/favoriteS
 const HeartButton = (props) => {
 
   const { track } = props
-  const favorites = useSelector((state) => state.favorites.favSongs)
+  const favorites = useSelector((state) => state.favSongs)
   const dispatch = useDispatch()
   const [toggle, setToggle] = useState(false)
   // constructor(props) {

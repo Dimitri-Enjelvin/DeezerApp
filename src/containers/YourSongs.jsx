@@ -7,7 +7,7 @@ import CardSong from "../components/CardTracks/CardSong";
 
 const YourSongs = () => {
 
-  const favoritesSongs = useSelector((state) => state.favorites.favSongs)
+  const favoritesSongs = useSelector((state) => state.favSongs)
 
     // const { favoritesSongs } = this.props;
 

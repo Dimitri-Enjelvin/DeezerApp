@@ -1,6 +1,7 @@
 import React from "react";
 import { Provider } from "react-redux";
 import { Route, Routes } from "react-router-dom";
+import { PersistGate } from "redux-persist/integration/react";
 
 // common
 import SideBar from "../components/SideBar/Sidebar";
@@ -22,7 +23,7 @@ import SingleRadio from "../pages/SingleRadioPage";
 import SingleGenre from "../pages/SingleGenre";
 // Others
 import Error from "../pages/Error";
-import { store } from "../redux/store";
+import { store, persistor } from "../redux/store";
 import FavoriteMobilePage from "../pages/FavoritesMobilePage";
 
 import "./App.css";
@@ -34,6 +35,7 @@ function App() {
       <div className="App">
         <SideBar />
         <Provider store={store}>
+        <PersistGate loading={null} persistor={persistor}>
           <SearchBar />
           <Routes>
             <Route exact="true" path="/" element={<Home />}></Route>
@@ -55,6 +57,7 @@ function App() {
 
             <Route element={<Error />} />
           </Routes>
+        </PersistGate>
         </Provider>
       </div>
     </React.Fragment>

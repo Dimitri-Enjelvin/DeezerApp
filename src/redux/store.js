@@ -1,17 +1,37 @@
 import { configureStore } from '@reduxjs/toolkit'
-import { combineReducers } from 'redux'
-import { setupListeners } from '@reduxjs/toolkit/query'
-import { favoriteSlice }  from './slice/favoriteSlice'
+import {
+  persistStore,
+  persistReducer,
+  FLUSH,
+  REHYDRATE,
+  PAUSE,
+  PERSIST,
+  PURGE,
+  REGISTER,
+} from 'redux-persist'
+import storage from 'redux-persist/lib/storage'
+// import { setupListeners } from '@reduxjs/toolkit/query'
+import favoriteReducer  from './slice/favoriteSlice'
 
-const reducers = combineReducers({
-  favorites: favoriteSlice.reducer,
-})
+
+const persistConfig = {
+  key: 'root',
+  version: 1,
+  storage: storage,
+}
+
+const persistedReducer = persistReducer(persistConfig, favoriteReducer)
 
 export const store = configureStore({
-  reducer: reducers,
-
-  // middleware: (getDefaultMiddleware) =>
-  //   getDefaultMiddleware().concat(favoriteSlice.reducer.middleware),
+  reducer: persistedReducer,
+  middleware: (getDefaultMiddleware) =>
+    getDefaultMiddleware({
+      serializableCheck: {
+        ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
+      },
+    }),
 })
 
-setupListeners(store.dispatch)
+export const persistor = persistStore(store)
+
+// setupListeners(store.dispatch)

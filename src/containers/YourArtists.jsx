@@ -21,7 +21,7 @@ const emojis = [
 
 const YourArtists = () => {
 
-  const followingArtists = useSelector((state) => state.favorites.favArtists)
+  const followingArtists = useSelector((state) => state.favArtists)
 
   const imageSelected = emojis[randomNumber(0, 4)]
   // constructor(props) {

@@ -20,7 +20,7 @@
     border-radius: 8px;
     margin: 10px;
     padding: 12px;
-    background: var(--background-accent-color);
+    background: var(--background-accent-color);  
 }
 
 .section-favorite a {
