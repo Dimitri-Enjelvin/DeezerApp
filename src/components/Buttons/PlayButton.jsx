@@ -13,12 +13,12 @@ const PlayButton = ({ url }) => {
     playing ? audio.play() : audio.pause();
   }, [audio, playing]);
 
-  useEffect(() => {
-    audio.addEventListener("ended", () => setPlaying(false));
-    return () => {
-      audio.removeEventListener("ended", () => setPlaying(false));
-    };
-  });
+  // useEffect(() => {
+  //   audio.addEventListener("ended", () => setPlaying(false));
+  //   return () => {
+  //     audio.removeEventListener("ended", () => setPlaying(false));
+  //   };
+  // });
 
   return (
     <FontAwesomeIcon

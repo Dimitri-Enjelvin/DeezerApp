@@ -5,7 +5,7 @@ export default function useTheme() {
 
   const [currentTheme, setTheme] = useState("dark");
   const themeElement = document.documentElement.getAttribute("data-theme")
-  
+
   let posX = currentTheme === "dark" ? 0 : 25
 
   function handleToggleTheme() {
@@ -30,7 +30,7 @@ export default function useTheme() {
     document.documentElement.setAttribute("data-theme", currentTheme)
 
 
-  }, [currentTheme])
+  }, [currentTheme, posX])
   
 
     return { currentTheme, handleToggleTheme }

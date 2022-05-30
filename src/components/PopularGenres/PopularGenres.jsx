@@ -15,7 +15,7 @@ const PopularGenres = () => {
         </h2>
       </Link>
     </div>
-  );
+  ); 
 };
 
 export default PopularGenres;

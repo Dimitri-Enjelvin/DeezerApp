@@ -1,5 +1,4 @@
-import { useState, useEffect } from 'react'
-import { API_URL } from "../core/constants"
+import { useState, useEffect, useCallback } from 'react'
 
 const DZ = window.DZ;
 
@@ -10,7 +9,7 @@ export default function useQuery() {
     const [tracks, setTracks] = useState({})
     const [error, setError] = useState("")
 
-    const getSearchTracksByQuery = () => {
+    const getSearchTracksByQuery = useCallback(() => {
 
         if(query === "") return
 
@@ -19,21 +18,19 @@ export default function useQuery() {
                 const data = await response
                 setTracks(data)
                 setIsLoading(false)
-            })
+            })  
         }
         catch (error) {
             setError(error)
         }
 
-        
-
-    }    
+    }, [query])    
 
     useEffect(() => {
 
         getSearchTracksByQuery()
 
-    }, [query])
+    }, [query, getSearchTracksByQuery])
     
 
     return { query, setQuery, tracks, isLoading, error }

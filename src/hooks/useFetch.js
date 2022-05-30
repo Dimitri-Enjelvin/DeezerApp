@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useCallback } from 'react'
 
 const DZ = window.DZ;
 
@@ -10,24 +10,29 @@ export default function useFetch(url) {
     const [error, setError] = useState("")
 
 
-    const fetchData = () => {
+    const fetchData = useCallback(() => {
 
+      try {
         DZ.api(`${url}`, async (response) => {
-        const data = await response    
-        setData(data)  
-        setIsLoading(false)
+          const data = await response    
+          setData(data)  
+          setIsLoading(false)
         })
+      }
+      catch (error) {
+        setError(error)
+      }
+        
 
-  }
+  }, [url])
 
   useEffect(() => {
     
     fetchData()
-    console.log("hhoh")
 
-  }, [])  
-
+  }, [fetchData])  
 
 
-    return { isLoading, data }
+
+    return { isLoading, data, error }
 }

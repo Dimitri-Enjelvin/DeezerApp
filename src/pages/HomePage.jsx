@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React from "react";
 import ChartAlbums from "../containers/ChartAlbums";
 import PopularGenres from "../components/PopularGenres/PopularGenres";
 import ChartTracks from "../containers/ChartTracks";
@@ -13,7 +13,6 @@ const HomePage = () => {
   const { data, isLoading }= useFetch("/chart")
   const { albums, tracks, artists } = data
 
-  console.log("dataaa", data)
 
   if (isLoading) {
     return (
