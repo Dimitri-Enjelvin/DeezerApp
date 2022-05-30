@@ -33,11 +33,11 @@ const SearchBar = () => {
     let query = e.target.value;
     setQuery(query)
 
-    // if(query.length > 0) {
-    //   document.getElementById("hint-container").style.display = "block";
-    // } else {
-    //   document.getElementById("hint-container").style.display = "none";
-    // }
+    if(query.length > 0) {
+      document.getElementById("hint-container").style.display = "block";
+    } else {
+      document.getElementById("hint-container").style.display = "none";
+    }
   }
 
   
