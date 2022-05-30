@@ -6,8 +6,6 @@ import { Link } from "react-router-dom";
 import ItemResult from "./ItemResult";
 
 const HintResults = ({ songsFound }) => {
-
-  // if(artistsFound === undefined && albumsFound === undefined && songsFound === undefined) return null
   
   return (
     <div id="hint-container">

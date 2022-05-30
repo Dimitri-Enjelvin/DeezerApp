@@ -1,16 +1,13 @@
 import React, { useState } from "react";
-// import { connect } from "react-redux";
-// import { bindActionCreators } from "redux";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faChevronLeft,
   faChevronRight,
 } from "@fortawesome/free-solid-svg-icons";
 
-// import { useGetAlbumsByArtistQuery } from "../api";
 import useFetch from "../hooks/useFetch";
 
-// import fetchAlbumsAction from "../api/fecthAlbumsArtist";
 
 import Loading from "../components/Loading/Loading";
 import CardAlbum from "../components/CardAlbum/CardAlbum";
@@ -21,24 +18,6 @@ const Albums = (props)  => {
   const { data: albums, isLoading } = useFetch(`artist/${id}/albums`)
   const [index, setIndex] = useState(0)
 
-  // constructor(props) {
-  //   super(props);
-  //   this.state = { index: 0 };
-  //   this.handleLeft = this.handleLeft.bind(this);
-  //   this.handleRight = this.handleRight.bind(this);
-  // }
-
-  // componentDidMount() {
-  //   const { fetchAlbums } = this.props;
-  //   fetchAlbums(this.props.id);
-  // }
-
-  // componentDidUpdate(prevProps) {
-  //   if (this.props.id !== prevProps.id) {
-  //     const { fetchAlbums } = this.props;
-  //     fetchAlbums(this.props.id);
-  //   }
-  // }
 
   const handleRight = () => {
     let limit = Math.round(albums.data.length / 2) + 5;
@@ -61,7 +40,6 @@ const Albums = (props)  => {
   }
 
 
-    // const { albums, loading } = this.props;
     if (isLoading) return <Loading />;
 
 
@@ -93,20 +71,18 @@ const Albums = (props)  => {
         </section>
       </React.Fragment>
     );
+
+    
 }
 
-// const mapStateToProps = (state) => ({
-//   loading: state.albumsArtist.loading,
-//   error: state.albumsArtist.error,
-//   albums: state.albumsArtist.albums,
-// });
+const isEgal = (prevProps, nextProps) => {
 
-// const mapDispatchToProps = (dispatch) =>
-//   bindActionCreators(
-//     {
-//       fetchAlbums: fetchAlbumsAction,
-//     },
-//     dispatch
-//   );
+      if (prevProps.id !== nextProps.id) {
+            return true
+      }
 
-export default Albums;
+      return false
+}
+
+
+export default React.memo(Albums, isEgal);

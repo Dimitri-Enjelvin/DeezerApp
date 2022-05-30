@@ -1,9 +1,6 @@
 import React from "react";
-// import { connect } from "react-redux";
-// import { bindActionCreators } from "redux";
 import { Link, useParams } from "react-router-dom";
 
-// import fetchAlbumAction from "../api/fetchSingleAlbum";
 import useFetch from "../hooks/useFetch"
 
 import convertDurationTrack from "../core/functions/convertDurationTrack";
@@ -19,13 +16,6 @@ const SingleAlbum = () => {
 
   const { id } = useParams()
   const { data: album, isLoading } = useFetch(`album/${id}`) 
-  // componentDidMount() {
-  //   const idAlbum = this.props.match.params.id;
-  //   const { fetchAlbum } = this.props;
-  //   fetchAlbum(idAlbum);
-  // }
-
-    // const { album, loading } = this.props;
 
     if (isLoading) return <Loading />;
 
@@ -37,8 +27,8 @@ const SingleAlbum = () => {
             <h1>{album.title}</h1>
             <div className="tags-genres">
               {album.genres.data.map((genre) => (
-                <Link to={`/genre/${genre.id}`}>
-                  <p key={genre.id}>{genre.name}</p>
+                <Link to={`/genre/${genre.id}`} key={genre.id}>
+                  <p>{genre.name}</p>
                 </Link>
               ))}
             </div>
@@ -84,18 +74,5 @@ const SingleAlbum = () => {
     );
 }
 
-// const mapStateToProps = (state) => ({
-//   error: state.singleAlbums.error,
-//   album: state.singleAlbums.info,
-//   loading: state.singleAlbums.loading,
-// });
-
-// const mapDispatchToProps = (dispatch) =>
-//   bindActionCreators(
-//     {
-//       fetchAlbum: fetchAlbumAction,
-//     },
-//     dispatch
-//   );
 
 export default SingleAlbum;

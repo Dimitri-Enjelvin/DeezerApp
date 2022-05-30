@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 // import { bindActionCreators } from "redux";
 // import { connect } from "react-redux";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -21,7 +21,6 @@ const SearchBar = () => {
 
   useEffect(() => {
     window.addEventListener("click", function (e) {
-      // if element exists, then...
       if (document.getElementById("hint-container")) {
         document.getElementById("hint-container").style.display = "none";
       }
@@ -29,7 +28,6 @@ const SearchBar = () => {
   
     return () => {
       window.removeEventListener("click", function (e) {
-        // if element exists, then...
         if (document.getElementById("hint-container")) {
           document.getElementById("hint-container").style.display = "none";
         }

@@ -28,10 +28,6 @@
     color: var(--text-color);
 }
 
-.container-song .info-container span {
-    font-weight: 700;
-}
-
 .container-song .info-container .contributors .track-artist {
     color: var(--red-pale);
     font-size: 0.8rem;
@@ -44,6 +40,14 @@
     min-width: 45px;
     margin: 0;
     font-size: 0.8rem;
+}
+
+.info-container span {
+    /* display: block;
+    width: 80%; */
+    font-weight: 700;
+    /* text-overflow: ellipsis;
+    word-wrap: break-word; */
 }
 
 @media (max-width: 432px) {

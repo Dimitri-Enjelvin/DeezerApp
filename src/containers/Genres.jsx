@@ -1,6 +1,5 @@
 import React from "react";
 
-// import { useGetGenresQuery } from "../api";
 import useFetch from "../hooks/useFetch";
 
 
@@ -20,6 +19,7 @@ const Genres = () => {
           <div className="genres-section">
             {genres.data.slice(1, genres.data.length).map((genre) => (
               <StandarCard
+                key={genre.id}
                 text={genre.name}
                 pic={genre.picture_big}
                 url={`/genre/${genre.id}`}

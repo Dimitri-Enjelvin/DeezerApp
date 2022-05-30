@@ -1,8 +1,5 @@
 import React from "react";
-// import { connect } from "react-redux";
-// import { bindActionCreators } from "redux";
 
-// import fetchTopTracksAction from "../api/fetchTopArtistTracks";
 import useFetch from '../hooks/useFetch'
 
 import Loading from "../components/Loading/Loading";
@@ -12,19 +9,8 @@ const PopularTracks = (props) => {
 
   const { id } = props
   const { data: tracks, isLoading } = useFetch(`artist/${id}/top`)
-  // componentDidMount() {
-  //   const { fetchTracks } = this.props;
-  //   fetchTracks(this.props.id);
-  // }
 
-  // componentDidUpdate(prevProps) {
-  //   if (this.props.id !== prevProps.id) {
-  //     const { fetchTracks } = this.props;
-  //     fetchTracks(this.props.id);
-  //   }
-  // }
 
-    // const { tracks, loading } = this.props;
     if (isLoading) return <Loading />;
 
 
@@ -41,18 +27,14 @@ const PopularTracks = (props) => {
     );
 }
 
-// const mapStateToProps = (state) => ({
-//   loading: state.topArtistTracks.loading,
-//   error: state.topArtistTracks.error,
-//   tracks: state.topArtistTracks.tracks,
-// });
+const isEgal = (prevProps, nextProps) => {
 
-// const mapDispatchToProps = (dispatch) =>
-//   bindActionCreators(
-//     {
-//       fetchTracks: fetchTopTracksAction,
-//     },
-//     dispatch
-//   );
+  if (prevProps.id !== nextProps.id) {
+        return true
+  }
 
-export default PopularTracks;
+  return false
+}
+
+
+export default React.memo(PopularTracks, isEgal);

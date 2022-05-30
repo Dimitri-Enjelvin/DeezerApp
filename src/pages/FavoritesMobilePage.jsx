@@ -4,26 +4,30 @@ import { Link } from "react-router-dom";
 const FavoriteMobilePage = () => {
     return (
       <div className="container-right">
-        <section className="section-favorite">
+        
           <Link to="/albums">
-            <h1>Albums</h1>
+            <section className="section-favorite">
+              <h1>Albums</h1>
+            </section>
           </Link>  
-        </section>
-        <section className="section-favorite">
-          <Link to="/artists">
-            <h1>Artists</h1>
+        
+          <Link to="/artists">        
+          <section className="section-favorite">
+            <h1>Artists</h1>        
+          </section>
           </Link>
-        </section>
-        <section className="section-favorite">
-          <Link to="/songs">
-            <h1>Songs</h1>
+
+          <Link to="/songs">        
+            <section className="section-favorite">
+              <h1>Songs</h1>        
+            </section>
           </Link>
-        </section>
-        <section className="section-favorite">
-          <Link to="/playlists">
-            <h1>Playlists</h1>
+
+          <Link to="/playlists">       
+            <section className="section-favorite">
+              <h1>Playlists</h1>        
+            </section>
           </Link>
-        </section>
       </div>
     );
 }

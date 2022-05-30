@@ -1,6 +1,5 @@
 import React from "react";
 import { useSelector } from "react-redux";
-// import { connect } from "react-redux";
 
 import MaleSingerBowie from "../assets/artists/male-singer_bowie.png";
 import MaleSingerPrince from "../assets/artists/male-singer_prince.png";
@@ -24,15 +23,6 @@ const YourArtists = () => {
   const followingArtists = useSelector((state) => state.favArtists)
 
   const imageSelected = emojis[randomNumber(0, 4)]
-  // constructor(props) {
-  //   super(props);
-  //   const emojis = [
-  //     
-  //   ];
-  //   this.state = { imageSelected: emojis[randomNumber(0, 4)] };
-  // }
-
-    // const { followingArtists } = this.props;
 
     return (
       <React.Fragment>
@@ -53,9 +43,5 @@ const YourArtists = () => {
       </React.Fragment>
     );
 }
-
-// const mapStateToProps = (state) => ({
-//   followingArtists: state.favorites.followingArtists,
-// });
 
 export default YourArtists;

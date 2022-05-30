@@ -1,13 +1,11 @@
 import React, { useState } from "react";
-// import { connect } from "react-redux";
-// import { bindActionCreators } from "redux";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faChevronLeft,
   faChevronRight,
 } from "@fortawesome/free-solid-svg-icons";
 
-// import fetchArtistsRelatedAction from "../api/fetchArtistsRelated";
 import useFetch from "../hooks/useFetch"
 
 import Loading from "../components/Loading/Loading";
@@ -18,24 +16,7 @@ const RelatedArtists = (props) => {
   const { id } = props
   const { data: related, isLoading } = useFetch(`artist/${id}/related`)
   const [index, setIndex] = useState(0)
-  // constructor(props) {
-  //   super(props);
-  //   this.state = { index: 0 };
-  //   this.handleLeft = this.handleLeft.bind(this);
-  //   this.handleRight = this.handleRight.bind(this);
-  // }
 
-  // componentDidMount() {
-  //   const { fecthRelated } = this.props;
-  //   fecthRelated(this.props.id);
-  // }
-
-  // componentDidUpdate(prevProps) {
-  //   if (this.props.id !== prevProps.id) {
-  //     const { fecthRelated } = this.props;
-  //     fecthRelated(this.props.id);
-  //   }
-  // }
 
   const handleRight = () => {
     let limit = Math.round(related.total / 2) + 5;
@@ -57,7 +38,6 @@ const RelatedArtists = (props) => {
     }
   }
 
-    // const { related, loading } = this.props;
     if (isLoading) return <Loading />;
 
 
@@ -92,18 +72,14 @@ const RelatedArtists = (props) => {
     );
 }
 
-// const mapStateToProps = (state) => ({
-//   loading: state.relatedArtists.loading,
-//   error: state.relatedArtists.error,
-//   related: state.relatedArtists.related,
-// });
+const isEgal = (prevProps, nextProps) => {
 
-// const mapDispatchToProps = (dispatch) =>
-//   bindActionCreators(
-//     {
-//       fecthRelated: fetchArtistsRelatedAction,
-//     },
-//     dispatch
-//   );
+  if (prevProps.id !== nextProps.id) {
+        return true
+  }
 
-export default RelatedArtists;
+  return false
+}
+
+
+export default React.memo(RelatedArtists, isEgal);

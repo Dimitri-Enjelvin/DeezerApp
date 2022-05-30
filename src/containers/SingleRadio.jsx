@@ -1,8 +1,5 @@
 import React from "react";
-// import { connect } from "react-redux";
-// import { bindActionCreators } from "redux";
 
-// import fetchRadioAction from "../api/fetchSingleRadio";
 import useFetch from "../hooks/useFetch";
 import convertDurationTrack from "../core/functions/convertDurationTrack";
 
@@ -13,14 +10,6 @@ const SingleRadio = (props) => {
 
   const { id } = props
   const { data: radio, isLoading } = useFetch(`radio/${id}/tracks`)
-
-  // componentDidMount() {
-  //   const idRadio = this.props.idRadio;
-  //   const { fetchRadio } = this.props;
-  //   fetchRadio(idRadio);
-  // }
-
-    // const { radio, loading } = this.props;
 
     if (isLoading) return <Loading />;
 
@@ -63,19 +52,5 @@ const SingleRadio = (props) => {
       </table>
     );
 }
-
-// const mapStateToProps = (state) => ({
-//   error: state.singleRadio.error,
-//   radio: state.singleRadio.info,
-//   loading: state.singleRadio.loading,
-// });
-
-// const mapDispatchToProps = (dispatch) =>
-//   bindActionCreators(
-//     {
-//       fetchRadio: fetchRadioAction,
-//     },
-//     dispatch
-//   );
 
 export default SingleRadio;

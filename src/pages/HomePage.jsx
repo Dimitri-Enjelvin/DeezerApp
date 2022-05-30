@@ -20,7 +20,6 @@ const HomePage = () => {
     )
   } 
   
-  
     return (
       <div className="container-right">
         <ChartAlbums albums={albums} />

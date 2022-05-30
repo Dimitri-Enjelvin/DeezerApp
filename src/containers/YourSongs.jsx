@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import { useSelector } from "react-redux";
 
 import NotesEmoji from "../assets/songs/multiple-musical-notes.png";
@@ -9,7 +9,6 @@ const YourSongs = () => {
 
   const favoritesSongs = useSelector((state) => state.favSongs)
 
-    // const { favoritesSongs } = this.props;
 
     return (
       <React.Fragment>
@@ -30,9 +29,5 @@ const YourSongs = () => {
       </React.Fragment>
     );
 }
-
-// const mapStateToProps = (state) => ({
-//   favoritesSongs: state.favorites.favoritesSongs,
-// });
 
 export default YourSongs;
