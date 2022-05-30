@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -7,6 +7,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 import useFetch from "../hooks/useFetch";
+import useScroll from "../hooks/useScroll"
 
 
 import Loading from "../components/Loading/Loading";
@@ -16,27 +17,14 @@ const Albums = (props)  => {
 
   const { id } = props
   const { data: albums, isLoading } = useFetch(`artist/${id}/albums`)
-  const [index, setIndex] = useState(0)
+  const { handleLeft, handleRight } = useScroll("artist", "carousel-albums")
 
 
-  const handleRight = () => {
-    let limit = Math.round(albums.data.length / 2) + 5;
-    if (index < limit) {
-      let n = index + 1;
-      setIndex(n);
-      document.getElementById(
-        "carousel-albums"
-      ).style.transform = `translateX(-${n * (170 + 40)}px)`;
-    }
+  const onHandleRight = () => {
+    handleRight(albums.data.length)
   }
-  const handleLeft = () => {
-    if (index > 0) {
-      let n = index - 1;
-      setIndex(n);
-      document.getElementById(
-        "carousel-albums"
-      ).style.transform = `translateX(-${n * (170 + 40)}px)`;
-    }
+  const onHandleLeft = () => {
+    handleLeft()
   }
 
 
@@ -51,12 +39,12 @@ const Albums = (props)  => {
             <FontAwesomeIcon
               icon={faChevronLeft}
               className="arrow"
-              onClick={handleLeft}
+              onClick={onHandleLeft}
             />
             <FontAwesomeIcon
               icon={faChevronRight}
               className="arrow"
-              onClick={handleRight}
+              onClick={onHandleRight}
             />
           </div>
         </div>

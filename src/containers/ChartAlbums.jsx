@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -8,29 +8,19 @@ import {
 
 import CardAlbum from "../components/CardAlbum/CardAlbum";
 
+import useScroll from "../hooks/useScroll";
+
 const ChartAlbums = (props) => {
 
-  const { albums } = props 
-  const [index, setIndex] = useState(0)
+  const { albums } = props  
+  const { handleLeft, handleRight } = useScroll("home", "carousel-top-albums")
 
-  const handleRight = () => {
-    let limit = Math.floor(albums.total / 2) - 1;
-    if (index < limit) {
-      let n = index + 1;
-      setIndex(n);
-      document.getElementById(
-        "carousel-top-albums"
-      ).style.transform = `translateX(-${n * (170 + 40)}px)`;
-    }
+
+  const onHandleRight = () => {
+    handleRight(albums.total)
   }
-  const handleLeft = () => {
-    if (index > 0) {
-      let n = index - 1;
-      setIndex(n);
-      document.getElementById(
-        "carousel-top-albums"
-      ).style.transform = `translateX(-${n * (170 + 40)}px)`;
-    }
+  const onHandleLeft = () => {
+    handleLeft()
   }
 
 
@@ -42,12 +32,12 @@ const ChartAlbums = (props) => {
               <FontAwesomeIcon
                 icon={faChevronLeft}
                 className="arrow"
-                onClick={handleLeft}
+                onClick={onHandleLeft}
               />
               <FontAwesomeIcon
                 icon={faChevronRight}
                 className="arrow"
-                onClick={handleRight}
+                onClick={onHandleRight}
               />
             </div>
           </div>
