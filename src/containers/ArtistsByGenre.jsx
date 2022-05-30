@@ -7,7 +7,6 @@ import Card from "../components/CardArtists/Card";
 
 const ArtistsByGenre = (props) => {
 
-  console.log("props", props);
   const { id } = props
   const { data: artists, isLoading } = useFetch(`genre/${id}/artists`) 
 

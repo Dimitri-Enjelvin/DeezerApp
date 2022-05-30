@@ -6,12 +6,11 @@ const PopularGenres = () => {
   return (
     <div className="container-popular">
       <h1>Popular</h1>
-      <Link to="/genre/122">
+      <Link to="/genre/116">
         <div className="container-images">
-          {/* <img src="../../assets/popular-genres.jpeg" alt="hip hop latino" /> */}
         </div>
         <h2 className="title">
-          Hip Hop <span>Latino</span>
+          Rap Music
         </h2>
       </Link>
     </div>

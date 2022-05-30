@@ -1,3 +1,18 @@
+.toggles-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.language-switch {
+    padding-right: 20px
+}
+
+#language {
+    cursor: pointer;
+    font-weight: 700;
+}
+
 .toggle {
     box-sizing: border-box;
     width: 50px;
