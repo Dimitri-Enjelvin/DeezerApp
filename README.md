@@ -48,10 +48,9 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
 
 <div align="center">
-    <img src="./assets/readme/screenshot-home-page.png" alt="Logo" width="600" height="400">
+    <img src="./src/assets/readme/screenshot-home-page.png" alt="Logo" width="600" height="400">
 </div>
 
 
