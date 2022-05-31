@@ -3,12 +3,17 @@ import "./Working.css";
 import ManConstruction from "../../assets/Man_Construction_Worker.png";
 import GoHomeButton from "../Buttons/GoHomeButton";
 
+import { useTranslation } from "react-i18next";
+
 const Working = () => {
+
+  const { t } = useTranslation()
+
   return (
     <div className="working-container">
       <img src={ManConstruction} alt="Man Construction Worker" />
-      <h2>Under Construction</h2>
-      <p>We're currently working on this page</p>
+      <h2>{t('trad:underConstruction')}</h2>
+      <p>{t('trad:currentlyWorking')}</p>
       <GoHomeButton />
     </div>
   );

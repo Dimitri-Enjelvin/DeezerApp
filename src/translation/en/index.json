@@ -1,0 +1,44 @@
+{
+
+    "trendingAlbums": "Trending Albums",
+    "recommendation": "Recommendation",
+    "topSongs": "Top songs",
+    "topArtists": "Top artists",
+    "topRadios": "Top radios",
+
+
+    "home": "Home",
+    "discover": "Discover",
+    "radio": "Radio",
+    "forYou": "For you",
+
+    "yourLibrary": "Your Library",
+    "yourAlbums": "Your Albums",
+    "yourArtists": "Your Artists",
+    "yourSongs": "Your Songs",
+    "yourPlaylists": "Your Playlists",
+
+    "noFavSongs": "Don't have favorite songs yet",
+    "noFavSongsText": "Find your favorite songs and mark them with your heart",
+    "noFavArtists": "Don't favorite artists yet",
+    "noFavArtistsText": "Find your favorite artist and start following them",
+
+
+    "albums": "Albums",
+    "artists": "Artists",
+    "tracks": "Songs",
+    "playlists": "Playlists",
+    "popular": "Popular",
+    "genders": "Genders",
+    "fanAlsoLike": "Fans also like...",
+    
+    
+    "searchPlaceholder": "Recherche un son...",
+    
+
+
+    "currentlyWorking": "We are currently working on this feature",
+    "underConstruction": "Under construction",
+    "goBack": "Go back"
+    
+}

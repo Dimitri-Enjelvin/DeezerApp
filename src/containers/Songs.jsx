@@ -1,10 +1,14 @@
 import React from "react";
+import { useTranslation } from "react-i18next"
 
 const Songs = () => {
+
+  const { t } = useTranslation()
+
   return (
     <div className="container-right">
-      <h1>Popular</h1>
-      <h1>Songs</h1>
+      <h1>{t('trad:popular')}</h1>
+      <h1>{t('trad:songs')}</h1>
     </div>
   );
 };

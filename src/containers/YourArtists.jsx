@@ -1,5 +1,7 @@
 import React from "react";
 import { useSelector } from "react-redux";
+import { useTranslation } from "react-i18next"
+
 
 import MaleSingerBowie from "../assets/artists/male-singer_bowie.png";
 import MaleSingerPrince from "../assets/artists/male-singer_prince.png";
@@ -20,13 +22,15 @@ const emojis = [
 
 const YourArtists = () => {
 
+  const { t } = useTranslation()
+
   const followingArtists = useSelector((state) => state.favArtists)
 
   const imageSelected = emojis[randomNumber(0, 4)]
 
     return (
       <React.Fragment>
-        <h1>Your Artists</h1>
+        <h1>{t('trad:yourArtists')}</h1>
         <div className="featured-artists">
           {followingArtists.length === 0 || followingArtists === null ? (
             <NotYet

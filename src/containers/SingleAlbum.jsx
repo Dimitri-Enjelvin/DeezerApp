@@ -43,7 +43,7 @@ const SingleAlbum = () => {
         <table>
           <thead>
             <tr>
-              <th>#</th>
+              <th>#</th> 
               <th>Title</th>
               <th id="duration-header">Duration</th>
               <th></th>

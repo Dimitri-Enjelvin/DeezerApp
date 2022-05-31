@@ -1,0 +1,44 @@
+{
+
+
+    "trendingAlbums": "Albums Tendances",
+    "recommendation": "Recommendation",
+    "topSongs": "Meilleurs sons",
+    "topArtists": "Meilleurs artists",
+    "touRadios": "Meilleures radios",
+
+
+    "home": "Accueil",
+    "discover": "Découverte", 
+    "radio": "Radio",
+    "forYou": "Pour Toi",
+
+    "yourLibrary": "Ton Espace",
+    "yourAlbums": "Tes Albums",
+    "yourArtists": "Tes Artistes",
+    "yourSongs": "Tes Songs",
+    "yourPlaylists": "Tes Playlists",
+
+    "noFavSongs": "Pas encore de sons en favori",
+    "noFavSongsText": "Trouves tes sons favoris et like les tous",
+    "noFavArtists": "Pas encore d'artistes en favori",
+    "noFavArtistsText": "Trouves tes artistes favoris et commences à les suivre",
+
+
+    "albums": "Albums",
+    "artists": "Artistes",
+    "tracks": "Sons",
+    "playlists": "Playlists",
+    "popular": "Populaire",
+    "genders": "Genres",
+    "fanAlsoLike": "Les fans écoutent aussi...",
+
+
+    "searchPlaceholder": "Recherche un son...",
+
+
+    "currentlyWorking": "Cette fonctionnalité est en développement",
+    "underConstruction": "En développement",
+    "goBack": "Retour"
+    
+}

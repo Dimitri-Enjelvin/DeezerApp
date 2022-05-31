@@ -1,13 +1,13 @@
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 
-import en from './en';
-import fr from './fr';
+import en from './en/index.json';
+import fr from './fr/index.json';
 
-const LANGUAGES = {
-  en,
-  fr
-};
+// const LANGUAGES = {
+//   en,
+//   fr
+// };
 
 i18n
   .use(initReactI18next) 
@@ -15,7 +15,12 @@ i18n
     
     compatibilityJSON: 'v3',
     resources: {
-      LANGUAGES
+      en: {
+        trad : en 
+      },
+      fr: {
+        trad : fr
+      } 
     },
     lng: "en", 
     fallbackLng: "en",

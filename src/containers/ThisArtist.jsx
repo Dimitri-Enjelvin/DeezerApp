@@ -6,7 +6,7 @@ import cutText from "../core/functions/cutText";
 import Loading from "../components/Loading/Loading";
 import FollowButton from "../components/Buttons/FollowButton";
 import useGetArtistBio from "../hooks/useGetArtistBio"
-
+ 
 const ThisArtist = (props) => {
 
   const { artist, name } = props

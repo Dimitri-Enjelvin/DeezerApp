@@ -1,4 +1,5 @@
 import React from "react";
+import { useTranslation } from "react-i18next"
 
 import useFetch from "../hooks/useFetch"
 
@@ -7,6 +8,8 @@ import StandarCard from "../components/StandardCard/StdCard";
 
 const TopRadios = () => { 
 
+  const { t } = useTranslation()
+
   const { data: radios, isLoading } = useFetch(`radio/top`)
 
     if (isLoading) return <Loading />;
@@ -14,7 +17,7 @@ const TopRadios = () => {
 
     return (
       <React.Fragment>
-        <h1>Top Radios</h1>
+        <h1>{t('trad:topRadios')}</h1>
         <div className="genres-section">
           {radios.data.map((radio) => (
             <StandarCard
