@@ -170,7 +170,7 @@ Don't hesistate to contact me if you have any questions or run into an issue whi
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
-Use this space to list resources you find helpful and would like to give credit to. I've included a few of my favorites to kick things off!
+Huge thanks to theses sources and helpers !
 
 * [ReadMe Template](https://github.com/othneildrew/Best-README-Template)
 * [Images](https://www.pexels.com/)

@@ -65,10 +65,10 @@ const RelatedArtists = (props) => {
 const isEgal = (prevProps, nextProps) => {
 
   if (prevProps.id !== nextProps.id) {
-        return true
+        return false
   }
 
-  return false
+  return true
 }
 
 
