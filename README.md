@@ -10,7 +10,7 @@
   <h3 align="center">Deezer App by Dimitri.E</h3>
 
   <p align="center">
-    An awesome React App build on top of the Deezer API
+    An awesome React App built on top of the Deezer API
     <br />
   </p>
 </div>
@@ -72,7 +72,7 @@ What can you do with this app you ask ?
     - [x] : Each artist's page contain a biography we display thanks to the LastFM API
 - [x] : You can follow artists, like tracks and find them later in your library
 - [x] : You can play a track preview and listen to your favorite song
-- [x] : You can choice between a 'dark' or 'light' theme for the app 
+- [x] : You can choose between a 'dark' and a 'light' theme for the app 
 
 
 
@@ -95,7 +95,7 @@ Please follow theses steps as you install this project locally.
 
 ### Prerequisites
 
-No particular prerequisites are required. You just need to have a computer and a connection.
+No particular prerequisites are needed. Make sure to have npm installed and a connection and this will do.
 
 ### Installation
 
@@ -120,10 +120,7 @@ No particular prerequisites are required. You just need to have a computer and a
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-This project is for education purposes only, cannot be used elsewhere. 
-
-_This is a test for an interview
-
+This project is for education purposes only, cannot be used elsewhere.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
