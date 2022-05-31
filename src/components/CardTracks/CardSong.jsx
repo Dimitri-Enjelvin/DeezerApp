@@ -12,11 +12,11 @@ const CardSong = ({ song }) => {
         <img src={song.album.cover_small} alt={song.title} />
       </div>
       <div className="info-container">
-        <span>{song.title_short}</span>
+        <span className="song-title">{song.title_short}</span>
         <div className="contributors">
           <p key={song.artist.id} className="track-artist">
             {song.artist.name}
-          </p>
+          </p> 
         </div>
       </div>
       <p className="duration">{convertDurationTrack(song.duration)}</p>

@@ -129,7 +129,7 @@ This project is for education purposes only, cannot be used elsewhere.
 <!-- ROADMAP -->
 ## Roadmap
 
-- [ ] Change tracks rows
+- [x] Change tracks rows
 - [ ] Add playlists feature
 - [ ] Handle better play track preview => one is playing === others stop
 - [ ] Add 'For you' feature => personalized recommendations

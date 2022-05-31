@@ -12,6 +12,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Sidebar = () => {
   return (
+
+    // Start of Sidebar 
+
     <div className="container">
       <section className="sidebar-topics">
         <NavLink exact="true" to="/" className="item" >
@@ -35,17 +38,14 @@ const Sidebar = () => {
       <section className="sidebar-library">
         <h4>Your Library</h4>
         <NavLink exact="true" to="/albums" className="item" >
-          {/* <FontAwesomeIcon className="icon" icon={faUser} /> */}
           <span>Albums</span>
         </NavLink>
 
         <NavLink exact="true" to="/artists" className="item" >
-          {/* <FontAwesomeIcon className="icon" icon={faUser} /> */}
           <span>Artists</span>
         </NavLink>
 
         <NavLink exact="true" to="/songs" className="item" >
-          {/* <FontAwesomeIcon className="icon" icon={faRecordVinyl} /> */}
           <span>Songs</span>
         </NavLink>
 
@@ -55,12 +55,14 @@ const Sidebar = () => {
           className="item"
           
         >
-          {/* <FontAwesomeIcon className="icon" icon={faMusic} /> */}
           <span>Playlists</span>
         </NavLink>
       </section>
 
-      {/* Footer on mobile */}
+      {/* End of Sidebar  */}
+
+
+      {/* Start of bottom mobile navbar */}
       <section className="sidebar-mobile">
         <NavLink exact="true" to="/" className="item" >
           <FontAwesomeIcon className="icon" icon={faHome} />
@@ -88,6 +90,8 @@ const Sidebar = () => {
         </NavLink>
       </section>
     </div>
+
+    // End of bottom mobile navbar
   );
 };
 
