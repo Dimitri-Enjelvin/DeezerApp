@@ -20,7 +20,7 @@ const Sidebar = () => {
 
         <NavLink exact="true" to="/discover" className="item" >
           <span>Discover</span>
-        </NavLink>
+        </NavLink> 
 
         <NavLink exact="true" to="/radio" className="item" >
           <span>Radio</span>

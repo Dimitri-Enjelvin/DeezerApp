@@ -65,12 +65,17 @@
     }
     .container {
         display: flex;
-        height: 100%;
-        min-width: 100vw;
+        align-self: center;
+        align-items: center;
+        justify-content: center;
+        border-top-left-radius: 32px;
+        border-top-right-radius: 32px;
+        height: 120%;
+        min-width: 100%;
         padding: 0;
         position: sticky;
         bottom: 0;
-        z-index: 9999;
+        z-index: 100;
     }
     .container .sidebar-library,
     .sidebar-topics {
@@ -79,6 +84,8 @@
     .container .sidebar-mobile {
         display: flex;
         width: 100%;
+        border-radius: 32px;
+
     }
     .container .sidebar-mobile .item {
         flex: 1;

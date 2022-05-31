@@ -134,7 +134,7 @@ This project is for education purposes only, cannot be used elsewhere.
 - [ ] Handle better play track preview => one is playing === others stop
 - [ ] Add 'For you' feature => personalized recommendations
 - [ ] Add like albums feature
-- [ ] Modify bottom navbar for mobile device
+- [x] Modify bottom navbar for mobile device
 - [ ] Handle small responsive issues
 - [ ] Multi-language Support
     - [x] English
