@@ -323,7 +323,7 @@ td p {
 
 th {
     font-size: 1.2rem;
-    background: linear-gradient(to bottom, var(--primary-color), transparent);
+    background: linear-gradient(to bottom, var(--yellow-accent), transparent);
     border: 0;
     text-align: left;
     position: sticky;
@@ -331,13 +331,17 @@ th {
     z-index: 9999;
 }
 
-@media (max-width: 550px) {
+tbody {
+    /* Center toggle buttons here */
+}
+
+@media (max-width: 550px) { 
     #duration-header,
     .duration-field {
         display: none;
     }
 }
-
+ 
 
 /* Start Single Artist Page */
 
@@ -359,9 +363,18 @@ th {
     margin: 0;
 }
 
+/* .artist-separator {
+    background-color: var(--yellow-accent);
+    border-radius: 25px;
+    height: 150px;
+    width: 5px;
+    margin-left: 10px;
+    margin-right: 10px
+} */
+
 .artist-bio p {
     text-align: center;
-    padding: 10px
+    padding: 10px;
     
 }
 
