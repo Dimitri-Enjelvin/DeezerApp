@@ -1,6 +1,6 @@
 {
 
-    "trendingAlbums": "Trending Albums",
+    "topAlbums": "Top albums",
     "recommendation": "Recommendation",
     "topSongs": "Top songs",
     "topArtists": "Top artists",
@@ -27,13 +27,17 @@
     "albums": "Albums",
     "artists": "Artists",
     "tracks": "Songs",
+    "title": "Title",
+    "album": "Album",
+    "artist": "Artist",
+    "duration": "Duration",
     "playlists": "Playlists",
     "popular": "Popular",
     "genders": "Genders",
     "fanAlsoLike": "Fans also like...",
     
     
-    "searchPlaceholder": "Recherche un son...",
+    "searchPlaceholder": "Search a song...",
     
 
 

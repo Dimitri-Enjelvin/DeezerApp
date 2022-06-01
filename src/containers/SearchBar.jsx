@@ -1,4 +1,6 @@
 import React, { useEffect } from "react";
+import { useTranslation } from "react-i18next"
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 
@@ -8,6 +10,8 @@ import HintResults from "../components/SearchResults/HintResults";
 import ToogleTheme from "../components/Buttons/Toggle";
 
 const SearchBar = () => {
+
+  const { t } = useTranslation()
 
   const { tracks, isLoading, query, setQuery } = useQuery()
 
@@ -34,7 +38,7 @@ const SearchBar = () => {
     setQuery(query)
 
     if(query.length > 0) {
-      document.getElementById("hint-container").style.display = "block";
+      document.getElementById("hint-container").style.display = "block"; 
     } else {
       document.getElementById("hint-container").style.display = "none";
     }
@@ -48,7 +52,7 @@ const SearchBar = () => {
             <FontAwesomeIcon className="icon-search" icon={faSearch} />
             <input
               type="text"
-              placeholder="Search Artist, Albums, Songs"
+              placeholder={t('trad:searchPlaceholder')}
               onChange={handleChange}
             />
           </form>
@@ -65,10 +69,10 @@ const SearchBar = () => {
           <FontAwesomeIcon className="icon-search" icon={faSearch} />
           <input
             type="text"
-            placeholder="Search Artist, Albums, Songs"
+            placeholder={t('trad:searchPlaceholder')}
             onChange={handleChange}
           />
-          <HintResults
+          <HintResults 
             songsFound={tracks}
           />
         </form>

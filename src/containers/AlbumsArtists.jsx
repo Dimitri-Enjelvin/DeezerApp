@@ -1,4 +1,5 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -14,6 +15,9 @@ import Loading from "../components/Loading/Loading";
 import CardAlbum from "../components/CardAlbum/CardAlbum";
 
 const Albums = (props)  => {
+
+  const { t } = useTranslation()
+
 
   const { id } = props
   const { data: albums, isLoading } = useFetch(`artist/${id}/albums`)
@@ -34,7 +38,7 @@ const Albums = (props)  => {
     return (
       <React.Fragment>
         <div className="header-carrousel">
-          <h2>Albums</h2>
+          <h2>{t('trad:albums')}</h2>
           <div>
             <FontAwesomeIcon
               icon={faChevronLeft}

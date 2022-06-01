@@ -1,4 +1,5 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 import useFetch from "../hooks/useFetch";
 
@@ -8,6 +9,8 @@ import StandarCard from "../components/StandardCard/StdCard";
 
 const Genres = () => {
 
+  const { t } = useTranslation()
+
   const { data: genres, isLoading } = useFetch("/genre")
 
 
@@ -15,7 +18,7 @@ const Genres = () => {
 
     return (
       <React.Fragment>
-        <h1>Genres</h1>
+        <h1>{t('trad:genders')}</h1>
           <div className="genres-section">
             {genres.data.slice(1, genres.data.length).map((genre) => (
               <StandarCard

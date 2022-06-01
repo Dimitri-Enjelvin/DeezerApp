@@ -1,4 +1,5 @@
 import React from "react";
+import { useTranslation } from "react-i18next"
 
 import useFetch from "../hooks/useFetch";
 import convertDurationTrack from "../core/functions/convertDurationTrack";
@@ -7,6 +8,8 @@ import Loading from "../components/Loading/Loading";
 import PlayButton from "../components/Buttons/PlayButton";
 
 const SingleRadio = (props) => {
+
+  const { t } = useTranslation()
 
   const { id } = props
   const { data: radio, isLoading } = useFetch(`radio/${id}/tracks`)
@@ -18,11 +21,11 @@ const SingleRadio = (props) => {
         <tbody>
           <tr>
             <th>#</th>
-            <th></th>
-            <th>Title</th>
-            <th>Artist</th>
-            <th>Album</th>
-            <th>Duration</th>
+            <th></th> 
+            <th>{t('trad:title')}</th>
+            <th>{t('trad:artist')}</th>
+            <th>{t('trad:album')}</th>
+            <th>{t('trad:duration')}</th>
             <th> </th>
           </tr>
           {radio.data.map((track, index) => (

@@ -1,4 +1,5 @@
 import React from "react";
+import { useTranslation } from "react-i18next"
 import { Link, useParams } from "react-router-dom";
 
 import useFetch from "../hooks/useFetch"
@@ -13,6 +14,8 @@ import PlayButton from "../components/Buttons/PlayButton";
 import HeartButton from "../components/Buttons/HeartButton";
 
 const SingleAlbum = () => {
+
+  const { t } = useTranslation()
 
   const { id } = useParams()
   const { data: album, isLoading } = useFetch(`album/${id}`) 
@@ -45,7 +48,7 @@ const SingleAlbum = () => {
             <tr>
               <th>#</th> 
               <th>Title</th>
-              <th id="duration-header">Duration</th>
+              <th id="duration-header">{t('trad:duration')}</th>
               <th></th>
               <th></th>
             </tr>

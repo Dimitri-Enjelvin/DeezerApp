@@ -1,7 +1,7 @@
 {
 
 
-    "trendingAlbums": "Albums Tendances",
+    "topAlbums": "Meilleurs albums",
     "recommendation": "Recommendation",
     "topSongs": "Meilleurs sons",
     "topArtists": "Meilleurs artists",
@@ -27,6 +27,10 @@
 
     "albums": "Albums",
     "artists": "Artistes",
+    "title": "Titre",
+    "album": "Album",
+    "artist": "Artiste",
+    "duration": "Durée",
     "tracks": "Sons",
     "playlists": "Playlists",
     "popular": "Populaire",

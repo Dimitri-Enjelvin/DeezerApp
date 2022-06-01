@@ -1,4 +1,5 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -11,6 +12,9 @@ import CardAlbum from "../components/CardAlbum/CardAlbum";
 import useScroll from "../hooks/useScroll";
 
 const ChartAlbums = (props) => {
+
+  const { t } = useTranslation()
+
 
   const { albums } = props  
   const { handleLeft, handleRight } = useScroll("home", "carousel-top-albums")
@@ -27,7 +31,7 @@ const ChartAlbums = (props) => {
       return (
         <div>
           <div className="header-carrousel">
-            <h1>Trending Albums</h1>
+            <h1>{t('trad:topAlbums')}</h1>
             <div>
               <FontAwesomeIcon
                 icon={faChevronLeft}

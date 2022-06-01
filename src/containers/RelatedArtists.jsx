@@ -1,4 +1,5 @@
 import React from "react";
+import { useTranslation } from "react-i18next"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -14,6 +15,8 @@ import Card from "../components/CardArtists/Card";
 
 
 const RelatedArtists = (props) => {
+
+  const { t } = useTranslation()
 
   const { id } = props
   const { data: related, isLoading } = useFetch(`artist/${id}/related`) 
@@ -34,7 +37,7 @@ const RelatedArtists = (props) => {
     return (
       <React.Fragment>
         <div className="header-carrousel">
-          <h2>Fans Also Like</h2>
+          <h2>{t('trad:fanAlsoLike')}</h2>
           <div>
             <FontAwesomeIcon
               icon={faChevronLeft}
