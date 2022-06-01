@@ -15,7 +15,7 @@
 
 .container .item:hover {
     cursor: pointer;
-    color: rgba(255, 255, 255, 0.6);
+    color: var(--secondary-text-color);
 }
 
 .container .item:focus {
@@ -35,7 +35,7 @@
     font-weight: 400;
     margin-left: 12px;
     color: var(--secondary-text-color);
-}
+} 
 
 .container .sidebar-mobile {
     display: none;

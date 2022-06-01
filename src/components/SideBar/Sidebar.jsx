@@ -1,6 +1,7 @@
 import React from "react";
 import "./Sidebar.css";
 import { NavLink } from "react-router-dom";
+import { useTranslation } from "react-i18next"
 
 import {
   faHome,
@@ -11,6 +12,9 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Sidebar = () => {
+
+  const { t } = useTranslation()
+
   return (
 
     // Start of Sidebar 
@@ -18,35 +22,35 @@ const Sidebar = () => {
     <div className="container">
       <section className="sidebar-topics">
         <NavLink exact="true" to="/" className="item" >
-          <span>Home</span>
+          <span>{t('trad:home')}</span>
         </NavLink>
 
         <NavLink exact="true" to="/discover" className="item" >
-          <span>Discover</span>
+          <span>{t('trad:discover')}</span>
         </NavLink> 
 
         <NavLink exact="true" to="/radio" className="item" >
-          <span>Radio</span>
+          <span>{t('trad:radio')}</span>
         </NavLink>
 
         <NavLink exact="true" to="/foryou" className="item" >
-          <span>For you</span>
+          <span>{t('trad:forYou')}</span>
         </NavLink>
       </section>
 
       {/* your library */}
       <section className="sidebar-library">
-        <h4>Your Library</h4>
+        <h4>{t('trad:yourLibrary')}</h4>
         <NavLink exact="true" to="/albums" className="item" >
-          <span>Albums</span>
+          <span>{t('trad:yourAlbums')}</span>
         </NavLink>
 
         <NavLink exact="true" to="/artists" className="item" >
-          <span>Artists</span>
+          <span>{t('trad:yourArtists')}</span>
         </NavLink>
 
         <NavLink exact="true" to="/songs" className="item" >
-          <span>Songs</span>
+          <span>{t('trad:yourSongs')}</span>
         </NavLink>
 
         <NavLink
@@ -55,7 +59,7 @@ const Sidebar = () => {
           className="item"
           
         >
-          <span>Playlists</span>
+          <span>{t('trad:yourPlaylists')}</span>
         </NavLink>
       </section>
 
@@ -66,12 +70,12 @@ const Sidebar = () => {
       <section className="sidebar-mobile">
         <NavLink exact="true" to="/" className="item" >
           <FontAwesomeIcon className="icon" icon={faHome} />
-          <span>Home</span>
+          <span>{t('trad:home')}</span>
         </NavLink>
 
         <NavLink exact="true" to="/discover" className="item" >
           <FontAwesomeIcon className="icon" icon={faSearch} />
-          <span>Discover</span>
+          <span>{t('trad:discover')}</span>
         </NavLink>
 
         <NavLink
@@ -81,12 +85,12 @@ const Sidebar = () => {
           
         >
           <FontAwesomeIcon className="icon" icon={faHeart} />
-          <span>Favorites</span>
+          <span>{t('trad:yourFavorites')}</span>
         </NavLink>
 
         <NavLink exact="true" to="/radio" className="item" >
           <FontAwesomeIcon className="icon" icon={faBroadcastTower} />
-          <span>Radio</span>
+          <span>{t('trad:radio')}</span>
         </NavLink>
       </section>
     </div>

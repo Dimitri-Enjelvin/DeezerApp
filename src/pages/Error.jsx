@@ -1,13 +1,18 @@
 import React from "react";
+import { useTranslation } from "react-i18next"
+
 import GoHomeButton from "../components/Buttons/GoHomeButton";
 
 const Error = () => {
+
+  const { t } = useTranslation()
+
   return (
     <div className="container-right">
       <div className="error-container">
         <div className="Error-Title">Oops!</div>
-        <h3>404 - PAGE NOT FOUND</h3>
-        <p>The page you are looking for can not be found</p>
+        <h3>{t('trad:error')}</h3>
+        <p>{t('trad:errorText')}</p>
         <GoHomeButton />
       </div>
     </div>
@@ -15,3 +20,4 @@ const Error = () => {
 };
 
 export default Error;
+ 

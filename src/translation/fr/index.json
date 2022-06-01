@@ -16,8 +16,9 @@
     "yourLibrary": "Ton Espace",
     "yourAlbums": "Tes Albums",
     "yourArtists": "Tes Artistes",
-    "yourSongs": "Tes Songs",
+    "yourSongs": "Tes Sons",
     "yourPlaylists": "Tes Playlists",
+    "yourFavorites": "Favoris",
 
     "noFavSongs": "Pas encore de sons en favori",
     "noFavSongsText": "Trouves tes sons favoris et like les tous",
@@ -39,10 +40,13 @@
 
 
     "searchPlaceholder": "Recherche un son...",
+    "searchFailed": "Pas de musiques correspondant",
 
 
     "currentlyWorking": "Cette fonctionnalité est en développement",
     "underConstruction": "En développement",
-    "goBack": "Retour"
+    "goBack": "Retour",
+    "error": "404 - PAGE INTROUVABLE",
+    "errorText": "La page que vous recherchez n'est pas accessible"
     
 }

@@ -160,7 +160,7 @@
     height: 100%;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1150px) {
     .home-divide {
         flex-direction: column;
     }

@@ -17,6 +17,8 @@
     "yourArtists": "Your Artists",
     "yourSongs": "Your Songs",
     "yourPlaylists": "Your Playlists",
+    "yourFavorites": "Favorites",
+
 
     "noFavSongs": "Don't have favorite songs yet",
     "noFavSongsText": "Find your favorite songs and mark them with your heart",
@@ -38,11 +40,14 @@
     
     
     "searchPlaceholder": "Search a song...",
+    "searchFailed": "No matching songs were found",
     
 
 
     "currentlyWorking": "We are currently working on this feature",
     "underConstruction": "Under construction",
-    "goBack": "Go back"
+    "goBack": "Go back",
+    "error": "404 - PAGE NOT FOUND",
+    "errorText": "The page you are looking for cannot be found"
     
 }

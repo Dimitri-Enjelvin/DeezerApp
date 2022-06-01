@@ -13,7 +13,7 @@ const SearchBar = () => {
 
   const { t } = useTranslation()
 
-  const { tracks, isLoading, query, setQuery } = useQuery()
+  const { tracks, isLoading, setQuery } = useQuery()
 
 
   useEffect(() => {
@@ -30,7 +30,7 @@ const SearchBar = () => {
         }
       })
     }
-  }, [query])
+  }, [])
   
 
   const handleChange = (e) => {
