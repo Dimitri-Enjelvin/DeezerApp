@@ -44,10 +44,10 @@
     animation: fade 1s;
 }
 
-.Track-Card {
+/* .Track-Card { */
     /* position: absolute;
     right: 20px; */
-}
+/* } */
 
 .Heart {
     cursor: pointer;
