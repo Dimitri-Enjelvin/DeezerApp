@@ -22,7 +22,7 @@ const ThisArtist = (props) => {
         <div className="artist-info">
           <h1>{artist.name}</h1>
           <p>{convertNumber(artist.nb_fan)} Fans</p>
-          <FollowButton artist={artist} />
+          <FollowButton artist={artist} type="artist" />
         </div>
         <div className="artist-separator"/>
         <div className="artist-bio">

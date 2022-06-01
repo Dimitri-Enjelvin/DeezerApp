@@ -243,6 +243,7 @@ header {
     display: flex;
     margin-bottom: 50px;
     max-height: 180px;
+    width: 100%;
 }
 
 header img {
@@ -257,11 +258,13 @@ header .info {
     justify-content: center;
     flex-direction: column;
     margin-left: 20px;
+    width: 60%;
 }
 
 header .info h1 {
     white-space: nowrap;
     text-overflow: ellipsis;
+    overflow: hidden;
     margin: 0;
 }
 

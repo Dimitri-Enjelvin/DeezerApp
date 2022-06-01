@@ -24,7 +24,7 @@ const SingleAlbum = () => {
 
     return (
       <div className="container-right">
-        <header>
+        <header className="header-album">
           <img src={album.cover_medium} alt={album.title} />
           <section className="info">
             <h1>{album.title}</h1>
