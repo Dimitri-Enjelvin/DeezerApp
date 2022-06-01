@@ -20,8 +20,7 @@ const YourSongs = () => {
         <div className="top-songs-container">
           {favoritesSongs.length === 0 || favoritesSongs === null ? (
             <NotYet
-              type={"songs"}
-              message={"Find your favorite songs and mark them with your heart"}
+              type="songs"
               imgSrc={NotesEmoji}
             />
           ) : (

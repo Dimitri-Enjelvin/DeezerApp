@@ -34,8 +34,7 @@ const YourArtists = () => {
         <div className="featured-artists">
           {followingArtists.length === 0 || followingArtists === null ? (
             <NotYet
-              type={"artists"}
-              message={"Find your favorite artist and start following them"}
+              type="artists"
               imgSrc={imageSelected}
             />
           ) : (

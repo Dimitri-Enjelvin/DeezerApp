@@ -363,32 +363,50 @@ tbody {
     margin: 0;
 }
 
-/* .artist-separator {
+.artist-separator {
     background-color: var(--yellow-accent);
     border-radius: 25px;
-    height: 150px;
-    width: 5px;
-    margin-left: 10px;
+    height: 20vh;
+    width: 10px;
+    margin-left: 30px;
     margin-right: 10px
-} */
+}
 
 .artist-bio p {
-    text-align: center;
     padding: 10px;
-    
 }
 
 @media (max-width: 1050px) {
     .header-artist {
+        display: flex;
         flex-direction: column;
+        width: 100%;
+    }
+    .header-artist .artist-info {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+    .header-artist img {
+        width: 200px;
+        max-height: 200px;
+        align-self: center;
+    }    
+    .artist-separator {
+        background-color: var(--yellow-accent);
+        border-radius: 25px;
+        height: 2px;
+        width: 80%;
+        margin-top: 10px;
     }
 }
 
 @media (max-width: 500px) {
 
     .header-artist img {
-        width: 150px;
-        max-height: 150px;
+        /* width: 150px;
+        max-height: 150px; */
     }    
     .artist-info h1 {
         text-align: center;
