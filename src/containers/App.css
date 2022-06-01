@@ -10,7 +10,7 @@
     background: var(--background-color);
 }
 
-.container-right {
+.container-right { 
     grid-area: main;
     overflow-y: scroll;
     padding: 0 var(--main-padding-sides);
@@ -369,7 +369,6 @@ th {
 .header-artist {
     display: flex;
     align-items: center;
-    width: 100%;
 }
 
 .header-artist img {
@@ -396,7 +395,6 @@ th {
 
 .artist-bio p {
     padding: 10px;
-    width: 60%;
 }
 
 @media (max-width: 1050px) {

@@ -21,7 +21,7 @@ const ThisArtist = (props) => {
         <img src={artist.picture_medium} alt={artist.name} />
         <div className="artist-info">
           <h1>{artist.name}</h1>
-          <p>{convertNumber(artist.nb_fan)} Fans</p>
+          <p>{convertNumber(artist.nb_fan)} Fans</p> 
           <FollowButton artist={artist} />
         </div>
         <div className="artist-separator"/>
