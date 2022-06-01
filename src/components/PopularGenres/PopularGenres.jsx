@@ -7,8 +7,7 @@ const PopularGenres = () => {
     <div className="container-popular">
       <h1>Popular</h1>
       <Link to="/genre/116">
-        <div className="container-images">
-        </div>
+        <div className="container-images" />
         <h2 className="title">
           Rap Music
         </h2>

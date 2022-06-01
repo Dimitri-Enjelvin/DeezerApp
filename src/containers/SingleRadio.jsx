@@ -44,7 +44,7 @@ const SingleRadio = (props) => {
                 <p>{convertDurationTrack(track.duration)}</p>
               </td>
               <td>
-                <PlayButton url={track.preview} />
+                <PlayButton url={track.preview} id={track.id} />
               </td>
             </tr>
           ))}

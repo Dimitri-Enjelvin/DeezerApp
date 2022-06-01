@@ -18,7 +18,7 @@
 }
 
 .Feedback {
-    position: absolute;
+    position: relative;
     bottom: 0;
     left: 0;
     right: 0;
@@ -39,14 +39,14 @@
 
 .Feedback.Press {
     bottom: 40px;
-    font-size: 20px;
+    font-size: 10px;
     visibility: visible;
     animation: fade 1s;
 }
 
 .Track-Card {
-    position: absolute;
-    right: 20px;
+    /* position: absolute;
+    right: 20px; */
 }
 
 .Heart {

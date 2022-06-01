@@ -131,7 +131,7 @@ This project is for education purposes only, cannot be used elsewhere.
 
 - [x] Change tracks rows
 - [ ] Add playlists feature
-- [ ] Handle better play track preview => one is playing === others stop
+- [x] Handle better play track preview => one is playing === others stop
 - [ ] Add 'For you' feature => personalized recommendations
 - [ ] Add like albums feature
 - [x] Modify bottom navbar for mobile device

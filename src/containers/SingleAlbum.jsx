@@ -61,7 +61,7 @@ const SingleAlbum = () => {
                   {convertDurationTrack(track.duration)}
                 </td>
                 <td>
-                  <PlayButton url={track.preview} />
+                  <PlayButton url={track.preview} id={track.id} />
                 </td>
                 <td>
                   <HeartButton track={addProperty(track, album.cover_small)} />

@@ -20,9 +20,11 @@ const CardSong = ({ song }) => {
           </p> 
         </div>
       </div>
-      <p className="duration">{convertDurationTrack(song.duration)}</p>
-      <PlayButton url={song.preview} id={song.id} />
-      <HeartButton track={song} />
+      <div className="buttons-duration-container">
+        <p className="duration">{convertDurationTrack(song.duration)}</p>
+        <PlayButton url={song.preview} id={song.id} />
+        <HeartButton track={song} />
+      </div>
     </div>
   );
 };
