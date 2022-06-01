@@ -1,4 +1,5 @@
 import { configureStore } from '@reduxjs/toolkit'
+import { combineReducers } from 'redux'
 import {
   persistStore,
   persistReducer,
@@ -12,6 +13,7 @@ import {
 import storage from 'redux-persist/lib/storage'
 // import { setupListeners } from '@reduxjs/toolkit/query'
 import favoriteReducer  from './slice/favoriteSlice'
+import songReducer from './slice/songSlice'
 
 
 const persistConfig = {
@@ -20,7 +22,12 @@ const persistConfig = {
   storage: storage,
 }
 
-const persistedReducer = persistReducer(persistConfig, favoriteReducer)
+const rootReducer = combineReducers({
+  favorites : favoriteReducer,
+  song : songReducer
+})
+
+const persistedReducer = persistReducer(persistConfig, rootReducer)
 
 export const store = configureStore({
   reducer: persistedReducer,

@@ -1,29 +1,36 @@
 import React, { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+
+import { updateSongPlaying } from "../../redux/slice/songSlice"
+
 import "./PlayButton.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlay, faPause } from "@fortawesome/free-solid-svg-icons";
 
-const PlayButton = ({ url }) => {
-  const [audio] = useState(new Audio(url));
-  const [playing, setPlaying] = useState(false);
+const PlayButton = ({ url, id }) => {
 
-  const toggle = () => setPlaying((prev) => !prev);
+  const isPlaying = useSelector((state) => state.song.songPlaying)
+  const [audio] = useState(new Audio(url));
+  const dispatch = useDispatch()
+
+  const toggle = () => {
+
+    dispatch(updateSongPlaying(id))
+
+  } 
 
   useEffect(() => {
-    playing ? audio.play() : audio.pause();
-  }, [audio, playing]);
-
-  // useEffect(() => {
-  //   audio.addEventListener("ended", () => setPlaying(false));
-  //   return () => {
-  //     audio.removeEventListener("ended", () => setPlaying(false));
-  //   };
-  // });
+    if(isPlaying === id) {
+      audio.play()
+    } else {
+      audio.pause()
+    }
+  }, [audio, id, isPlaying]);
 
   return (
     <FontAwesomeIcon
       className="icon-controller"
-      icon={playing ? faPause : faPlay}
+      icon={isPlaying === id ? faPause : faPlay}
       onClick={toggle}
     />
   );

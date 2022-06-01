@@ -6,6 +6,7 @@ import PlayButton from "../Buttons/PlayButton";
 import HeartButton from "../Buttons/HeartButton";
 
 const CardSong = ({ song }) => {
+
   return (
     <div className="container-song">
       <div className="cover-container">
@@ -20,7 +21,7 @@ const CardSong = ({ song }) => {
         </div>
       </div>
       <p className="duration">{convertDurationTrack(song.duration)}</p>
-      <PlayButton url={song.preview} />
+      <PlayButton url={song.preview} id={song.id} />
       <HeartButton track={song} />
     </div>
   );

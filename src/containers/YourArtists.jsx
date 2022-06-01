@@ -24,7 +24,7 @@ const YourArtists = () => {
 
   const { t } = useTranslation()
 
-  const followingArtists = useSelector((state) => state.favArtists)
+  const followingArtists = useSelector((state) => state.favorites.favArtists)
 
   const imageSelected = emojis[randomNumber(0, 4)]
 

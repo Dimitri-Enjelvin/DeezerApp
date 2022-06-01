@@ -11,7 +11,7 @@ const YourSongs = () => {
 
   const { t } = useTranslation()
 
-  const favoritesSongs = useSelector((state) => state.favSongs)
+  const favoritesSongs = useSelector((state) => state.favorites.favSongs)
 
 
     return (

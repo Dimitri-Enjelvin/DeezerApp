@@ -2,7 +2,8 @@ import { createSlice } from '@reduxjs/toolkit'
 
 const initialState = {
   favSongs : [],
-  favArtists : []
+  favArtists : [],
+  favAlbums : [],
 }
 
 export const favoriteSlice = createSlice({
@@ -22,6 +23,13 @@ export const favoriteSlice = createSlice({
     },
     removeFavoriteArtist: (state, action) => {
         state.favArtists = [...state.favArtists.filter((artist) => artist.id !== action.payload)]
+    },
+
+    addFavoriteAlbum: (state, action) => {
+      state.favAlbums = [...state.favAlbums, action.payload]
+    },
+    removeFavoriteAlbum: (state, action) => {
+        state.favAlbums = [...state.favAlbums.filter((album) => album.id !== action.payload)]
     }
     
   },
@@ -30,8 +38,10 @@ export const favoriteSlice = createSlice({
 export const { 
     addFavoriteArtist,
     addFavoriteSong, 
+    addFavoriteAlbum,
     removeFavoriteArtist, 
-    removeFavoriteSong
+    removeFavoriteSong,
+    removeFavoriteAlbum
  } = favoriteSlice.actions
 
 export default favoriteSlice.reducer
