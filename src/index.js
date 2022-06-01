@@ -10,10 +10,3 @@ root.render(
     <App />
   </Router>
 );
-
-// ReactDOM.render(
-//   <Router>
-//     <App />
-//   </Router>,
-//   document.getElementById("root")
-// );

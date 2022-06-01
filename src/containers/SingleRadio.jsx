@@ -23,8 +23,8 @@ const SingleRadio = (props) => {
             <th>#</th>
             <th></th> 
             <th>{t('trad:title')}</th>
-            <th>{t('trad:artist')}</th>
-            <th>{t('trad:album')}</th>
+            <th id="artist-header">{t('trad:artist')}</th>
+            <th id="album-header">{t('trad:album')}</th>
             <th>{t('trad:duration')}</th>
             <th> </th>
           </tr>
@@ -37,10 +37,10 @@ const SingleRadio = (props) => {
               <td>
                 <p>{track.title}</p>
               </td>
-              <td>
+              <td className="artist-field">
                 <p>{track.artist.name}</p>
               </td>
-              <td>
+              <td className="album-field">
                 <p>{track.album.title}</p>
               </td>
               <td>

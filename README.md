@@ -136,9 +136,9 @@ This project is for education purposes only, cannot be used elsewhere.
 - [ ] Add like albums feature
 - [x] Modify bottom navbar for mobile device
 - [ ] Handle small responsive issues
-- [ ] Multi-language Support
+- [x] Multi-language Support
     - [x] English
-    - [ ] French
+    - [x] French
 
 See the [open issues](https://github.com/Dimitri-Enjelvin/DeezerApp/issues) for a full list of proposed features (and known issues).
 

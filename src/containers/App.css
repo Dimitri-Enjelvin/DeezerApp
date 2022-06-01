@@ -315,7 +315,7 @@ table {
 }
 
 td {
-    position: relative;
+    /* position: relative; */
     height: 40px;
     text-align: left;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
@@ -323,7 +323,7 @@ td {
 
 td p {
     white-space: nowrap;
-    max-width: 200px;
+    max-width: 200px; 
     overflow: hidden;
     text-overflow: ellipsis;
 }
@@ -333,18 +333,29 @@ th {
     background: linear-gradient(to bottom, var(--yellow-accent), transparent);
     border: 0;
     text-align: left;
-    position: sticky;
-    top: 0;
-    z-index: 9999;
+    /* position: sticky;
+    top: 0; */
+    /* z-index: 9999; */
 }
 
-tbody {
-    /* Center toggle buttons here */
-}
 
 @media (max-width: 550px) { 
     #duration-header,
     .duration-field {
+        display: none;
+    }
+}
+
+@media (max-width: 1000px) { 
+    #artist-header,
+    .artist-field {
+        display: none;
+    }
+}
+
+@media (max-width: 870px) { 
+    #album-header,
+    .album-field {
         display: none;
     }
 }
