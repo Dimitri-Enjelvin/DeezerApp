@@ -22,4 +22,7 @@
     margin: auto;
     padding: 0 10px;
     color: var(--text-color);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }

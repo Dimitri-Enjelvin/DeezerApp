@@ -7,7 +7,7 @@ const ItemResult = ({ text, pic }) => {
       <img src={pic} alt={text} />
       <p>{text}</p>
     </div>
-  );
+  ); 
 };
 
 export default ItemResult;
